@@ -18,6 +18,7 @@
         ]
     },
     "require": {
+        "amphp/aerys": "0.8.x-dev",
         "amphp/amp": "^2.0",
         "carica/firmata": "^1.0",
         "carica/io": "^1.0",

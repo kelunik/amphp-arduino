@@ -1,8 +1,12 @@
 <?php
 
-use Amp\Delayed;
+use Aerys\Root;
+use Aerys\Router;
+use Aerys\Server;
+use Aerys\Websocket\Websocket;
 use Carica\Firmata;
 use Carica\Io\Event\Loop\Factory as LoopFactory;
+use Kelunik\Arduino\PinController;
 use function Amp\asyncCall;
 use function Kelunik\Arduino\adapt;
 
@@ -17,12 +21,16 @@ asyncCall(function () use ($board) {
     $pin = $board->pins[13];
     $pin->mode = Firmata\Pin::MODE_OUTPUT;
 
-    while (true) {
-        $pin->digital = !$pin->digital;
+    $pinController = new PinController($pin);
 
-        echo 'LED: ' . ($pin->digital ? 'on' : 'off') . "\n";
-        yield new Delayed(1000);
-    }
+    $router = new Router;
+    $router->addRoute('GET', '/control', new Websocket($pinController));
+    $router->setFallback(new Root(__DIR__ . '/../public'));
+
+    $server = new Server($router);
+    $server->expose('127.0.0.1', 4321);
+    $server->expose('::1', 4321);
+    yield $server->start();
 });
 
 LoopFactory::run();

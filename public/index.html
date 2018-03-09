@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Aerys Chat</title>
+    <style>
+        * { padding: 0; margin: 0; box-sizing: border-box; }
+        body { font-size: 14px; font-family: sans-serif; display: flex; height: 100vh; flex-direction: column; justify-content: center; align-items: center; }
+        button { flex: 0 0 auto; width: 120px; height: 60px; margin: 20px; background: #eee; color: #333; border: 2px solid transparent; }
+        button:active { background-color: #ccf; }
+        input:focus, button:focus { border-color: #07e; outline: 0; }
+    </style>
+</head>
+<body>
+<button type="button" id="btn-on">on</button>
+<button type="button" id="btn-off">off</button>
+<script>
+    console.log("I'm fine");
+    var ws = new WebSocket("ws://localhost:4321/control");
+    var btnOn = document.getElementById("btn-on");
+    var btnOff = document.getElementById("btn-off");
+
+    btnOn.addEventListener("click", function () {
+        ws.send(JSON.stringify({
+            state: 'on'
+        }));
+    });
+
+    btnOff.addEventListener("click", function () {
+        ws.send(JSON.stringify({
+            state: 'off'
+        }));
+    });
+
+    ws.addEventListener("message", function(e) {
+        console.log(e);
+    });
+</script>
+</body>
+</html>
