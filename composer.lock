@@ -1,0 +1,263 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "6116825cb8cde77915cf169519efebdc",
+    "packages": [
+        {
+            "name": "amphp/amp",
+            "version": "v2.0.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/amphp/amp.git",
+                "reference": "4a742beb59615f36ed998e2dc210e36576e44c44"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/amphp/amp/zipball/4a742beb59615f36ed998e2dc210e36576e44c44",
+                "reference": "4a742beb59615f36ed998e2dc210e36576e44c44",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7"
+            },
+            "require-dev": {
+                "amphp/phpunit-util": "^1",
+                "friendsofphp/php-cs-fixer": "^2.3",
+                "phpstan/phpstan": "^0.8.5",
+                "phpunit/phpunit": "^6.0.9",
+                "react/promise": "^2"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Amp\\": "lib"
+                },
+                "files": [
+                    "lib/functions.php",
+                    "lib/Internal/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bob Weinand",
+                    "email": "bobwei9@hotmail.com"
+                },
+                {
+                    "name": "Niklas Keller",
+                    "email": "me@kelunik.com"
+                },
+                {
+                    "name": "Daniel Lowrey",
+                    "email": "rdlowrey@php.net"
+                },
+                {
+                    "name": "Aaron Piotrowski",
+                    "email": "aaron@trowski.com"
+                }
+            ],
+            "description": "A non-blocking concurrency framework for PHP applications.",
+            "homepage": "http://amphp.org/amp",
+            "keywords": [
+                "async",
+                "asynchronous",
+                "awaitable",
+                "concurrency",
+                "event",
+                "event-loop",
+                "future",
+                "non-blocking",
+                "promise"
+            ],
+            "time": "2018-01-27T19:18:05+00:00"
+        },
+        {
+            "name": "amphp/react-adapter",
+            "version": "v1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/amphp/react-adapter.git",
+                "reference": "c54710930add61eae97c596e3d2d76830e394ae9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/amphp/react-adapter/zipball/c54710930add61eae97c596e3d2d76830e394ae9",
+                "reference": "c54710930add61eae97c596e3d2d76830e394ae9",
+                "shasum": ""
+            },
+            "require": {
+                "amphp/amp": "^2",
+                "react/event-loop": "^0.4.2"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.3",
+                "phpunit/phpunit": "^4.8"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Amp\\ReactAdapter\\": "lib"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Niklas Keller",
+                    "email": "me@kelunik.com"
+                }
+            ],
+            "description": "Adapter to make any ReactPHP library compatible with Amp.",
+            "time": "2017-09-14T15:38:41+00:00"
+        },
+        {
+            "name": "carica/firmata",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ThomasWeinert/carica-firmata.git",
+                "reference": "b36ea89530951b0f51981e10771f3189a1442ef5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ThomasWeinert/carica-firmata/zipball/b36ea89530951b0f51981e10771f3189a1442ef5",
+                "reference": "b36ea89530951b0f51981e10771f3189a1442ef5",
+                "shasum": ""
+            },
+            "require": {
+                "carica/io": "^1.0",
+                "php": ">=7.1"
+            },
+            "provide": {
+                "carica/io-devices": "0.0.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Carica\\Firmata\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Thomas Weinert",
+                    "email": "thomas@weinert.info"
+                }
+            ],
+            "description": "Firmata client library",
+            "homepage": "https://github.com/ThomasWeinert/carica-firmata",
+            "keywords": [
+                "arduino",
+                "firmata"
+            ],
+            "time": "2018-03-03T13:48:40+00:00"
+        },
+        {
+            "name": "carica/io",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ThomasWeinert/carica-io.git",
+                "reference": "8f996060d0bd01adda12c7e8e595ed962d8c71fb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ThomasWeinert/carica-io/zipball/8f996060d0bd01adda12c7e8e595ed962d8c71fb",
+                "reference": "8f996060d0bd01adda12c7e8e595ed962d8c71fb",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Carica\\Io\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Thomas Weinert",
+                    "email": "thomas@weinert.info"
+                }
+            ],
+            "description": "Non blocking I/O for PHP",
+            "homepage": "https://github.com/ThomasWeinert/carica-io",
+            "keywords": [
+                "asynchronous-io",
+                "non-blocking-io"
+            ],
+            "time": "2018-03-02T16:29:58+00:00"
+        },
+        {
+            "name": "react/event-loop",
+            "version": "v0.4.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/reactphp/event-loop.git",
+                "reference": "8bde03488ee897dc6bb3d91e4e17c353f9c5252f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/reactphp/event-loop/zipball/8bde03488ee897dc6bb3d91e4e17c353f9c5252f",
+                "reference": "8bde03488ee897dc6bb3d91e4e17c353f9c5252f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.8"
+            },
+            "suggest": {
+                "ext-event": "~1.0",
+                "ext-libev": "*",
+                "ext-libevent": ">=0.1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "React\\EventLoop\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Event loop abstraction layer that libraries can use for evented I/O.",
+            "keywords": [
+                "asynchronous",
+                "event-loop"
+            ],
+            "time": "2017-04-27T10:56:23+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

@@ -1,0 +1,26 @@
+{
+    "name": "kelunik/arduino",
+    "description": "Arduino Demo App with Amp.",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Niklas Keller",
+            "email": "me@kelunik.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Kelunik\\Arduino\\": "src"
+        },
+        "files": [
+            "src/functions.php"
+        ]
+    },
+    "require": {
+        "amphp/amp": "^2.0",
+        "carica/firmata": "^1.0",
+        "carica/io": "^1.0",
+        "amphp/react-adapter": "^1.1"
+    }
+}
